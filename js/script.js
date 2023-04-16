@@ -5,23 +5,24 @@ createApp({
 
     data(){
         return{
-            tasks:[
-            {
-                text:'Ciao',
-                done:true
-            },
-            {
-                text:'Ciaooooo',
-                done:false
-            },
-            {
-                text:'Ciaoooo',
-                done:true
-            },
-        ]
+            tasks:[]
+        
 
         }
+    },
+    
+    methods:{
+        newTask(){
+            const addTask = {
+                text:'aaaaaaa',
+                done: true
+            }
+            console.log(addTask);
+            this.tasks.unshift(addTask)
+        }
     }
+
+
 
 
 
