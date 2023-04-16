@@ -26,22 +26,13 @@
 
             <div class="dc-container">
                 <ul>
-                    <li>
-                        <span>aaa</span>
+                   <li
+                      v-for="task in tasks"
+                      >
+                        <span>{{task.text}}</span>
                         <i class="fa-solid fa-ban text-danger"></i>
                     </li>
-                    <li>
-                        aaaa
-                    </li>
-                    <li>
-                        aaaa
-                    </li>
-                    <li>
-                        aaaa
-                    </li>
-                    <li>
-                        aaaa
-                    </li>
+                 
                 </ul>
             </div>
 
