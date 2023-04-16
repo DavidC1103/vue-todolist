@@ -5,20 +5,22 @@ createApp({
 
     data(){
         return{
-            tasks:[]
+            tasks:[],
+            taskAdd : ''
         
-
         }
     },
-    
+
     methods:{
         newTask(){
             const addTask = {
-                text:'aaaaaaa',
-                done: true
+                text:this.taskAdd,
+                done: false
             }
-            console.log(addTask);
+
             this.tasks.unshift(addTask)
+            this.taskAdd =''
+            console.log(this.taskAdd);            
         }
     }
 

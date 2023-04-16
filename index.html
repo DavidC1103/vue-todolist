@@ -20,15 +20,18 @@
             </header>
 
             <div class="input-area text-center mt-5">
-                <input class="p-2 border-1 rounded-3 me-5 w-50" type="text" placeholder="Aggiungi una nuova task">
+                <input v-model="taskAdd" @keyup.enter="newTask" class="p-2 border-1 rounded-3 me-5 w-50" type="text" placeholder="Aggiungi una nuova task">
 
                 <button @click="newTask" type="button" class="btn btn-primary mb-2">Aggiungi Task</button>
             </div>
 
             <div class="dc-container">
+                <h3 v-if="tasks.length ===0" class="lh-lg ps-3">Non ci sono task da svolgere</h3>
                 <ul>
                    <li
                       v-for="task in tasks"
+                      :class="{'done': task.done}"
+                      @click="task.done = !task.done"
                       >
                         <span>{{task.text}}</span>
                         <i class="fa-solid fa-ban text-danger"></i>

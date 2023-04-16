@@ -26,8 +26,13 @@ ul li{
     justify-content: space-between;
     align-items: center;
     padding-right: 30px;
+    cursor: pointer;
 }
 
 ul li:last-child{
     border-bottom: 0;
+}
+
+.done{
+    text-decoration: line-through;
 }
