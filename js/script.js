@@ -21,6 +21,13 @@ createApp({
             this.tasks.unshift(addTask)
             this.taskAdd =''
             console.log(this.taskAdd);            
+        },
+
+        removeTask(index){
+            if(this.tasks[index].done){
+                this.tasks.splice(index,1)
+            }
+
         }
     }
 

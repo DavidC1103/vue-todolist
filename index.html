@@ -28,13 +28,13 @@
             <div class="dc-container">
                 <h3 v-if="tasks.length ===0" class="lh-lg ps-3">Non ci sono task da svolgere</h3>
                 <ul>
-                   <li
-                      v-for="task in tasks"
-                      :class="{'done': task.done}"
-                      @click="task.done = !task.done"
-                      >
-                        <span>{{task.text}}</span>
-                        <i class="fa-solid fa-ban text-danger"></i>
+                   <li v-for="(task, index) in tasks">
+                        <span
+                        :class="{'done': task.done}"
+                        @click="task.done = !task.done">
+                        {{task.text}}</span>
+                        
+                        <i @click.stop="removeTask(index)" class="fa-solid fa-ban text-danger"></i>
                     </li>
                  
                 </ul>
